@@ -1,0 +1,243 @@
+
+:root {
+    --bordercolor: violet;
+    --bgcolor: rgb(39, 110, 87);
+    --fontcolor: black;
+    --boxcolor: lightgreen;
+}
+
+body {
+    background-color: var(--bgcolor);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+    font-size: 200%;
+}
+
+h2 {
+    font-size: 150%
+}
+
+ul li:before {
+    content: "▷";
+}
+
+ul li:hover {
+    background-color: lime;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    justify-content: space-around;
+    background-color: var(--boxcolor);
+    border-color: var(--bordercolor);
+    border-style: dotted;
+    border-width: 3px;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+}
+
+header ul li {
+    display: inline-block;
+    margin: 0px 40px 0px 40px;
+}
+
+#aboutMe {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: flex-start;
+    width: 75%;
+    height: 200px;
+    border-style: groove;
+    border-color: var(--bordercolor);
+    border-width: 5px;
+    background-color: var(--boxcolor);
+    margin: 75px 20px 20px 20px;
+}
+
+#aboutMe p {
+    text-align: center;
+}
+#aboutMe::before {
+    content: "about me";
+    position: absolute;
+    right: 90%;
+    font-size: 150%;
+    font-style: oblique;
+}
+
+#aboutMe:hover {
+    border-color: blue;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    padding: 0 10%;
+    width: 80%;
+}
+
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: flex-start;
+    clear: both;
+    width: 100%;
+    margin: 0;
+}
+
+article div {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    background-color: var(--boxcolor);
+    border-color:var(--bordercolor);
+    border: 3px;
+    border-style: dotted;
+}
+
+#projects article:hover {
+    border-color: lime;
+}
+
+article a::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+article figure {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: inherit;
+    overflow: hidden;
+}
+
+article figure img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    
+}
+
+#projects article {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    width: 23%;
+    height: 150px;
+    border-color: var(--bordercolor);
+    border-style: groove;
+    border-width: 5px;
+    margin: 1.2%;
+    background-color: var(--boxcolor);
+    overflow: hidden;
+}
+
+#projects::before {
+    content: "projects";
+    position: absolute;
+    right: 90%;
+    font-size: 150%;
+    font-style: oblique;
+}
+
+#projects article:first-of-type {
+    width: 75%;
+    height: 300px;
+}
+
+#contact {   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    width: 75%;
+    height: 100px;
+    border-style: groove;
+    border-color: var(--bordercolor);
+    border-width: 5px;
+    background-color: var(--boxcolor);
+    margin: 20px 20px 20px 20px; 
+    clear: both;
+}
+
+#contact::before {
+    content: "contact info";
+    position: absolute;
+    right: 90%;
+    font-size: 150%;
+    font-style: oblique;
+}
+
+#contact:hover {
+    border-color: blue;
+}
+
+#resume {
+    float: left;    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    width: 75%;
+    height: 100px;
+    border-style: groove;
+    border-color: var(--bordercolor);
+    border-width: 5px;
+    background-color: var(--boxcolor);
+    margin: 20px 20px 20px 20px; 
+    clear: both;
+}
+#resume::before {
+    content: "resume";
+    position: absolute;
+    right: 90%;
+    font-size: 150%;
+    font-style: oblique;
+}
+
+#resume:hover {
+    border-color: blue;
+}
+
+footer {
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    #projects article {
+        width: 35%;
+    }
+    #contact {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 555px) {
+    #projects article {
+        width: 100%;
+    }
+
+    #contact {
+        width: 100%;
+    }
+
+    #aboutMe::before {
+        visibility: hidden;
+    }
+}
