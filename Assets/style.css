@@ -1,9 +1,14 @@
 
+/* TODO: merge identical rulesets. DRY */
+
+/* Set some variables so colors can easily be changed globally. */
 :root {
     --bordercolor: violet;
     --bgcolor: rgb(39, 110, 87);
     --fontcolor: black;
     --boxcolor: lightgreen;
+    --interactive: lime;
+    --noninteractive: blue;
 }
 
 body {
@@ -19,14 +24,17 @@ h2 {
     font-size: 150%
 }
 
+/* Add custom list item marker, from Unicode (easily pasted as the HTML is in UTF-8). */
 ul li:before {
     content: "▷";
 }
 
+/* Highlight moused over list elements with a pink background. */
 ul li:hover {
-    background-color: pink;
+    background-color: var(--interactive);
 }
 
+/* Set up the header bar, including a big heading and nav links, to scroll with the user for ease of navigation. */
 header {
     display: flex;
     align-items: center;
@@ -50,6 +58,7 @@ header ul li {
     margin: 0px 40px 0px 40px;
 }
 
+/* Set up the about me section. */
 #aboutMe {
     display: flex;
     flex-wrap: wrap;
@@ -67,6 +76,8 @@ header ul li {
 #aboutMe p {
     text-align: center;
 }
+
+/* Place a label to the left of the about me section. */
 #aboutMe::before {
     content: "about me";
     position: absolute;
@@ -75,8 +86,9 @@ header ul li {
     font-style: oblique;
 }
 
+/* Recolor the border to highlight the box when moused over. */
 #aboutMe:hover {
-    border-color: blue;
+    border-color: var(--noninteractive);
 }
 
 main {
@@ -87,6 +99,7 @@ main {
     width: 80%;
 }
 
+/* Set up the projects section. */
 #projects {
     display: flex;
     flex-wrap: wrap;
@@ -97,6 +110,7 @@ main {
     margin: 0;
 }
 
+/* Style the articles. */
 article div {
     position: absolute;
     left: 15px;
@@ -107,10 +121,12 @@ article div {
     border-style: dotted;
 }
 
+/* Highlight the articles with a different border color than the non-clickable sections. */
 #projects article:hover {
-    border-color: lime;
+    border-color: var(--interactive);
 }
 
+/* Make articles clickable by stretching an <a> tag over them. */
 article a::before {
     content: " ";
     position: absolute;
@@ -120,6 +136,7 @@ article a::before {
     height: 100%;
 }
 
+/* Set up the article images to hide overflow. */
 article figure {
     display: flex;
     justify-content: center;
@@ -135,6 +152,7 @@ article figure img {
     
 }
 
+/* Set up the articles. */
 #projects article {
     display: flex;
     flex-wrap: wrap;
@@ -150,6 +168,7 @@ article figure img {
     overflow: hidden;
 }
 
+/* Place a label to the left of the projects section. */
 #projects::before {
     content: "projects";
     position: absolute;
@@ -158,11 +177,13 @@ article figure img {
     font-style: oblique;
 }
 
+/* Make the first article/project larger. */
 #projects article:first-of-type {
     width: 75%;
     height: 300px;
 }
 
+/* Set up the contact info section. */
 #contact {   
     display: flex;
     flex-wrap: wrap;
@@ -177,6 +198,7 @@ article figure img {
     clear: both;
 }
 
+/* Place a label to the left of the contact info section. */
 #contact::before {
     content: "contact info";
     position: absolute;
@@ -185,10 +207,12 @@ article figure img {
     font-style: oblique;
 }
 
+/* Highlight moused over section with the "non-interactive" border color. */
 #contact:hover {
-    border-color: blue;
+    border-color: var(--noninteractive);
 }
 
+/* Set up the resume section. */
 #resume {
     float: left;    
     display: flex;
@@ -203,6 +227,8 @@ article figure img {
     margin: 20px 20px 20px 20px; 
     clear: both;
 }
+
+/* Label the resume section. */
 #resume::before {
     content: "resume";
     position: absolute;
@@ -211,14 +237,16 @@ article figure img {
     font-style: oblique;
 }
 
+/* Highlight resume with "non-interactive" border color. */
 #resume:hover {
-    border-color: blue;
+    border-color: var(--noninteractive);
 }
 
 footer {
     text-align: center;
 }
 
+/* Media queries to adjust layout to fit smaller screens. */
 @media screen and (max-width: 768px) {
     #projects article {
         width: 35%;
