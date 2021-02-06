@@ -6,7 +6,7 @@
     --bordercolor: violet;
     --bgcolor: rgb(39, 110, 87);
     --fontcolor: black;
-    --boxcolor: lightgreen;
+    --boxcolor: pink;
     --interactive: lime;
     --noninteractive: blue;
 }
@@ -36,8 +36,10 @@ ul li:hover {
 
 /* Set up the header bar, including a big heading and nav links, to scroll with the user for ease of navigation. */
 header {
+    z-index: 1;
     display: flex;
     align-items: center;
+    width: 90%;
     position: fixed;
     top: 20px;
     left: 20px;
@@ -70,11 +72,14 @@ header ul li {
     border-color: var(--bordercolor);
     border-width: 5px;
     background-color: var(--boxcolor);
-    margin: 75px 20px 20px 20px;
+    margin: 75px 0 0 20px;
 }
 
 #aboutMe p {
-    text-align: center;
+    position: relative;
+    top: 30px;
+    width: 65%;
+    text-align: left;
 }
 
 /* Place a label to the left of the about me section. */
@@ -96,7 +101,7 @@ main {
     flex-wrap: wrap;
     justify-content: left;
     padding: 0 10%;
-    width: 80%;
+    width: 100%;
 }
 
 /* Set up the projects section. */
@@ -107,7 +112,7 @@ main {
     align-items: flex-start;
     clear: both;
     width: 100%;
-    margin: 0;
+    margin: 20px 0 0 0;
 }
 
 /* Style the articles. */
@@ -136,17 +141,26 @@ article a::before {
     height: 100%;
 }
 
-/* Set up the article images to hide overflow. */
-article figure {
+/* Set up the images to hide overflow. */
+figure {
     display: flex;
     justify-content: center;
-    width: 100%;
     height: inherit;
     overflow: hidden;
 }
 
+#aboutMe figure {
+    width: 30%;
+    float: left;
+    justify-content: left;
+}
+
+article figure {
+    width: 100%;
+}
+
 article figure img {
-    width: inherit;
+    width: 100%;
     height: inherit;
     object-fit: cover;
     
@@ -163,7 +177,7 @@ article figure img {
     border-color: var(--bordercolor);
     border-style: groove;
     border-width: 5px;
-    margin: 1.2%;
+    margin: 10px 10px 10px 20px;
     background-color: var(--boxcolor);
     overflow: hidden;
 }
@@ -202,7 +216,7 @@ article figure img {
 #contact::before {
     content: "contact info";
     position: absolute;
-    right: 90%;
+    right: 89%;
     font-size: 150%;
     font-style: oblique;
 }
@@ -258,14 +272,14 @@ footer {
 
 @media screen and (max-width: 555px) {
     #projects article {
-        width: 100%;
+        width: 75%;
     }
 
     #contact {
-        width: 100%;
+        width: 75%;
     }
 
-    #aboutMe::before {
+    #aboutMe::before, #projects::before, #contact::before, #resume::before {
         visibility: hidden;
     }
 }
