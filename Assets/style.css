@@ -226,36 +226,6 @@ article figure img {
     border-color: var(--noninteractive);
 }
 
-/* Set up the resume section.
-#resume {
-    float: left;    
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
-    width: 75%;
-    height: 100px;
-    border-style: groove;
-    border-color: var(--bordercolor);
-    border-width: 5px;
-    background-color: var(--boxcolor);
-    margin: 20px 20px 20px 20px; 
-    clear: both;
-}
-
-/* Label the resume section. */
-/* #resume::before {
-    content: "resume";
-    position: absolute;
-    right: 90%;
-    font-size: 150%;
-    font-style: oblique; */
-/* } */
-
-/* Highlight resume with "non-interactive" border color. */
-/* #resume:hover {
-    border-color: var(--noninteractive);
-} */ */
-
 footer {
     text-align: center;
 }
