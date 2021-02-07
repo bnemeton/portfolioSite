@@ -226,7 +226,7 @@ article figure img {
     border-color: var(--noninteractive);
 }
 
-/* Set up the resume section. */
+/* Set up the resume section.
 #resume {
     float: left;    
     display: flex;
@@ -243,18 +243,18 @@ article figure img {
 }
 
 /* Label the resume section. */
-#resume::before {
+/* #resume::before {
     content: "resume";
     position: absolute;
     right: 90%;
     font-size: 150%;
-    font-style: oblique;
-}
+    font-style: oblique; */
+/* } */
 
 /* Highlight resume with "non-interactive" border color. */
-#resume:hover {
+/* #resume:hover {
     border-color: var(--noninteractive);
-}
+} */ */
 
 footer {
     text-align: center;
