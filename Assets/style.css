@@ -3,12 +3,12 @@
 
 /* Set some variables so colors can easily be changed globally. */
 :root {
-    --bordercolor: violet;
-    --bgcolor: rgb(39, 110, 87);
+    --bordercolor: #e4bad4;
+    --bgcolor: #caf7e3;
     --fontcolor: black;
-    --boxcolor: pink;
-    --interactive: lime;
-    --noninteractive: blue;
+    --boxcolor: #edffec;
+    --interactive: #e4bad4;
+    --noninteractive: #f6dfeb;
 }
 
 body {
